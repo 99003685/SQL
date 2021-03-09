@@ -21,39 +21,39 @@ public class MiniMain {
 		if(n==1)
 		{
 			System.out.println("Enter the Team Id: "); 
-			int tid=Integer.parseInt(br.readLine());
+			int teamid=Integer.parseInt(br.readLine());
 			System.out.println("Enter the Team Name: ");
-		    String tname=br.readLine();
+		    String teamname=br.readLine();
 		    System.out.println("Enter the Owner Name: ");
-		    String towner=br.readLine();
+		    String teamowner=br.readLine();
 		    System.out.println("Enter the Coach Name: ");
-		    String tcoach=br.readLine();
-		    Team t= new Team(tid,tname,towner,tcoach);
+		    String teamcoach=br.readLine();
+		    Team t= new Team(teamid,teamname,teamowner,teamcoach);
 		    TeamDAO td=new TeamDAO();
 		    td.insertTeam(t);
 			
 
 
 			System.out.println("Enter the Player Id: "); 
-			int pid=Integer.parseInt(br.readLine());
+			int playerid=Integer.parseInt(br.readLine());
 			System.out.println("Enter the Player Name: ");
-		    String pname=br.readLine();
+		    String playername=br.readLine();
 			System.out.println("Enter the Date of Birth: ");
-		    Date pdate=Date.valueOf(br.readLine());
+		    Date playerdate=Date.valueOf(br.readLine());
 		    System.out.println("Enter the Player Nationality: ");
-		    String pnation=br.readLine();
+		    String playernation=br.readLine();
 		    System.out.println("Enter the Player Skills: ");
-		    String pskills=br.readLine();
+		    String playerskills=br.readLine();
 		    System.out.println("Enter the Player runs: ");
-		    int pruns=Integer.parseInt(br.readLine());
+		    int playerruns=Integer.parseInt(br.readLine());
 		    System.out.println("Enter the Player Wickets: ");
-		    int pwic=Integer.parseInt(br.readLine());
+		    int playerwickets=Integer.parseInt(br.readLine());
 		    System.out.println("Enter the Player Number of Matches: ");
-		    int pnum=Integer.parseInt(br.readLine());
+		    int playermatches=Integer.parseInt(br.readLine());
 		    System.out.println("Enter Player Team Id: ");
-		    int pteam=Integer.parseInt(br.readLine());
+		    int playerteam=Integer.parseInt(br.readLine());
 		    
-		    Player p=new Player(pid,pname,pdate,pnation,pskills,pruns,pwic,pnum,pteam);
+		    Player p=new Player(playerid,playername,playerdate,playernation,playerskills,playerruns,playerwickets,playermatches,playerteam);
 		    PlayerDAO pd=new PlayerDAO();
 		    pd.insertPlayer(p);
 		}
@@ -67,7 +67,7 @@ public class MiniMain {
 		else if(n==3)
 		{
 			System.out.println("Enter table to update:");
-			System.out.println("1.Team 2.Player");
+			System.out.println("1.On the Basis Of Team\n  2. On the basis of Player");
 			int u=Integer.parseInt(br.readLine());
 		    if(u==1)
 		    {
